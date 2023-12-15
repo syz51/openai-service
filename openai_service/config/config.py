@@ -8,6 +8,7 @@ from openai_service.config import prompts
 class Settings(BaseSettings):
     openai_api_key: str
     translate_prompt: str = prompts.translate_prompt.replace("\n", "")
+    gemini_prompt: str = prompts.translate_gemini.replace("\n", "")
 
     class Config:
         env_file = ".env"
